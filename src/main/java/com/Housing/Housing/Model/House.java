@@ -1,6 +1,5 @@
 package com.Housing.Housing.Model;
 
-
 import jakarta.persistence.*;
 import lombok.*;
 

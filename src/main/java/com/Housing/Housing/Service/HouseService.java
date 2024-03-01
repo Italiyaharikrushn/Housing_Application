@@ -33,7 +33,6 @@ public class HouseService {
     public List<Object> minSalePrice() {
         return houseRepository.minSalePrice();
     }
-
 //    find all
     public List<House> getAllHouse() {
         return houseRepository.findAll();
