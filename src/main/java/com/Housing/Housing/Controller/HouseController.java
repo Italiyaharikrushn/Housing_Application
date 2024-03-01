@@ -31,28 +31,31 @@ public class HouseController {
         return houseService.avgByLocation();
     }
 
-//    max price
+//    maximum price
     @GetMapping("/maxPrice")
     public List<Object> maxSalePrice(){
         return houseService.maxSalePrice();
     }
 
-//    min price
+//    minimum price
     @GetMapping("/minPrice")
     public List<Object> minSalePrice(){
         return houseService.minSalePrice();
     }
 
+//    find by all
     @GetMapping("/get")
     public List<House> getAllHouse(){
         return houseService.getAllHouse();
     }
 
+//    find by single
     @GetMapping("/house/{id}")
     public Optional<House> getHouseById(@PathVariable Long id){
         return houseService.getHouseById(id);
     }
 
+//    delete single
     @DeleteMapping("/house/{id}")
     public void delete(@PathVariable("id") long id) {
         houseService.delete(id);

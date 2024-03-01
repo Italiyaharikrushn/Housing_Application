@@ -14,22 +14,27 @@ public class HouseService {
     @Autowired
     HouseRepository houseRepository;
 
+//    push data
     public List<House> addHouseData(List<House> data) {
         return houseRepository.saveAll(data);
     }
 
+//    avg by all
     public int avgSalePrice(){
         return houseRepository.avgAllSell();
     }
 
+//    avg by location
     public List<Object> avgByLocation() {
         return houseRepository.avgByLocation();
     }
 
+//    maximum
     public List<Object> maxSalePrice() {
         return houseRepository.maxSalePrice();
     }
 
+//    minimum price
     public List<Object> minSalePrice() {
         return houseRepository.minSalePrice();
     }
@@ -43,6 +48,7 @@ public class HouseService {
         return houseRepository.findById(id);
     }
 
+//    delete single
     public void delete(long id) {
         houseRepository.deleteById(id);
     }
